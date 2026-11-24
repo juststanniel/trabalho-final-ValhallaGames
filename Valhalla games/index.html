@@ -5,11 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VALHALLA GAMES</title>
 
-    <style>
-        body { font-family: Arial, sans-serif; }
-        table { border-collapse: collapse; }
-        th, td { padding: 6px; }
-    </style>
 </head>
 <body>
     <h1>VALHALLA GAMES</h1>
@@ -178,22 +173,5 @@
         <p>&copy; 2026 VALHALLA GAMES - Grupo: Eduardo, Ian, Beatriz e Lorenzo</p>
     </div>
 
-    <script>
-        // TODO: arrumar isso aqui depois se der tempo
-        let qtd_itens = 0; 
-
-        document.getElementById("btnAdicionar").onclick = function() {
-            let sel = document.getElementById("jogo");
-            let txt = sel.options[sel.selectedIndex].text;
-
-            let li = document.createElement("li");
-            li.innerText = txt; // meio gambiarra mas funciona
-
-            document.getElementById("listaCarrinho").appendChild(li);
-
-            qtd_itens++;
-            document.getElementById("quantidade").innerHTML = qtd_itens;
-        };
-    </script>
 </body>
 </html> 
