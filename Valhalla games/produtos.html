@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - VALHALLA GAMES</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="topo">
+        <nav>
+            <h2><a href="index.html">VALHALLA GAMES</a></h2>
+
+            <form action="produtos.html" method="get">
+                <label for="busca">Buscar:</label>
+                <input type="search" id="busca" name="busca" placeholder="Buscar jogos e gift cards...">
+                <input type="submit" value="Buscar">
+            </form>
+
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html#destaques">Destaques</a></li>
+                <li><a href="produtos.html?filtro=jogos#catalogo">Jogos</a></li>
+                <li><a href="produtos.html?filtro=xbox#catalogo">Xbox</a></li>
+                <li><a href="produtos.html?filtro=playstation#catalogo">PlayStation</a></li>
+                <li><a href="produtos.html?filtro=nintendo#catalogo">Nintendo</a></li>
+                <li><a href="produtos.html?filtro=giftcards#catalogo">Gift Cards</a></li>
+                <li><a href="produtos.html#pedido">Fazer pedido</a></li>
+                <li><a href="produtos.html#area-carrinho">Carrinho</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        <h1>Produtos</h1>
+
+        <section id="catalogo">
+            <div class="filtros" role="group" aria-label="Filtrar produtos">
+                <button type="button" data-filtro="todos">Todos</button>
+                <button type="button" data-filtro="jogos">Jogos</button>
+                <button type="button" data-filtro="xbox">Xbox</button>
+                <button type="button" data-filtro="playstation">PlayStation</button>
+                <button type="button" data-filtro="nintendo">Nintendo</button>
+                <button type="button" data-filtro="giftcards">Gift Cards</button>
+            </div>
+
+            <p id="semResultado" class="aviso" hidden>Nenhum produto encontrado. Clique em "Todos" para ver o catálogo.</p>
+
+            <table id="tabelaCatalogo">
+                <caption>Jogos e Gift Cards VALHALLA GAMES</caption>
+                <thead>
+                    <tr>
+                        <th>Capa</th>
+                        <th>Categoria</th>
+                        <th>Item</th>
+                        <th>Plataforma</th>
+                        <th>Preço</th>
+                        <th>Comprar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </section>
+
+        <div id="area-carrinho" class="bloco">
+            <h2>Carrinho</h2>
+            <p>Itens selecionados: <span id="quantidade">0</span></p>
+            <p id="carrinhoVazio" class="aviso">Seu carrinho está vazio.</p>
+            <ul id="listaCarrinho"></ul>
+            <p class="total">Total: <strong id="total">R$ 0,00</strong></p>
+        </div>
+
+        <section id="pedido" class="bloco">
+            <h2>Finalizar pedido</h2>
+
+            <form id="formPedido" class="formulario">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="email@exemplo.com" required>
+
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" name="idade" min="0" placeholder="Digite sua idade">
+
+                <fieldset>
+                    <legend>Selecione a forma de pagamento:</legend>
+                    <label><input type="radio" id="pix" name="forma_pagamento" value="Pix" required> Pix</label>
+                    <label><input type="radio" id="cartao" name="forma_pagamento" value="Cartão"> Cartão</label>
+                    <label><input type="radio" id="dinheiro" name="forma_pagamento" value="Dinheiro"> Dinheiro</label>
+                </fieldset>
+
+                <input type="submit" class="botao" value="Enviar pedido">
+            </form>
+        </section>
+
+        <div id="resultado" class="bloco" aria-live="polite">
+            <strong>VALHALLA GAMES</strong>
+            <p>Escolha seus produtos e monte seu pedido!</p>
+        </div>
+    </main>
+
+    <a id="atalhoCarrinho" href="#area-carrinho" hidden></a>
+
+    <div id="rodape">
+        <p>
+            &copy; 2026 VALHALLA GAMES - Grupo: Eduardo, Ian, Beatriz e Lorenzo
+            <a href="admin.html" title="Área restrita">·</a>
+    </div>
+
+
+</body>
+</html>
