@@ -4,174 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VALHALLA GAMES</title>
-
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>VALHALLA GAMES</h1>
-    <hr>
+    <header id="topo">
+        <nav>
+            <h2><a href="#topo">VALHALLA GAMES</a></h2>
 
-    <h4>Bem-vindo à loja!</h4>
-    <h2>Jogos e Gift Cards para Xbox, PlayStation e Nintendo</h2>
-    <p>Aqui você encontra alguns jogos populares e gift cards para sua plataforma favorita.</p>
+            <form action="produtos.html" method="get">
+                <label for="busca">Buscar:</label>
+                <input type="search" id="busca" name="busca" placeholder="Buscar jogos e gift cards...">
+                <input type="submit" value="Buscar">
+            </form>
 
-    <h3>Destaques da loja</h3>
-    <ul>
-        <img src="GTA 6 .jpg.jfif" alt="GTA 6" style="width: 300px; height: auto;">
-        <li>Grand Theft Auto VI (GTA 6) - Xbox e PlayStation</li>
-        <img src="RDR2 .jpg" alt="RDR2" style="width: 300px; height: auto;">
-        <li>Red Dead Redemption 2 - Xbox, PlayStation e PC</li>
-        <img src="batman-arkham-collection-pc-steam-cover .jpg" alt="Batman" style="width: 300px; height: auto;">
-        <li>Batman Arkham Trilogy - PlayStation e Nintendo</li>
-        <img src="nintendo-switch-playstation-xbox-912x569 .jpg" alt="Gifts" style="width: 300px; height: auto;">
-        <li>Gift Cards Xbox, PlayStation e Nintendo eShop</li>
-    </ul>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="#destaques">Destaques</a></li>
+                <li><a href="produtos.html?filtro=jogos#catalogo">Jogos</a></li>
+                <li><a href="produtos.html?filtro=xbox#catalogo">Xbox</a></li>
+                <li><a href="produtos.html?filtro=playstation#catalogo">PlayStation</a></li>
+                <li><a href="produtos.html?filtro=nintendo#catalogo">Nintendo</a></li>
+                <li><a href="produtos.html?filtro=giftcards#catalogo">Gift Cards</a></li>
+                <li><a href="produtos.html#pedido">Fazer pedido</a></li>
+                <li><a href="produtos.html#area-carrinho">Carrinho</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
 
-    <h2>Catálogo completo</h2>
+    <main>
+        <section class="hero">
+            <h4>Bem-vindo à loja!</h4>
+            <h2>Jogos e Gift Cards para Xbox, PlayStation e Nintendo</h2>
+            <p>Aqui você encontra alguns jogos populares e gift cards para sua plataforma favorita.</p>
+        </section>
 
-    <table border="1" id="tabelaCatalogo">
-        <caption>Jogos e Gift Cards VALHALLA GAMES</caption>
-        <thead>
-            <tr>
-                <th>Categoria</th>
-                <th>Item</th>
-                <th>Plataforma</th>
-                <th>Preço</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>ULTIMATE</td>
-                <td>Grand Theft Auto VI</td>
-                <td>Xbox e PlayStation</td>
-                <td>R$ 549,99</td>
-            </tr>
-            <tr>
-                <td rowspan="8">Jogos</td>
-                <td>Grand Theft Auto VI (GTA 6)</td>
-                <td>Xbox e PlayStation</td>
-                <td>R$ 449,99</td>
-            </tr>
-            <tr>
-                <td>Red Dead Redemption 2</td>
-                <td>Xbox e PlayStation</td>
-                <td>R$ 179,90</td>
-            </tr>
-            <tr>
-                <td>Grand Theft Auto V</td>
-                <td>Xbox e PlayStation</td>
-                <td>R$ 129,90</td>
-            </tr>
-            <tr>
-                <td>The Legend of Zelda: Tears of the Kingdom</td>
-                <td>Nintendo</td>
-                <td>R$ 299,90</td>
-            </tr>
-            <tr>
-                <td>God of War Ragnarok</td>
-                <td>PlayStation</td>
-                <td>R$ 249,90</td>
-            </tr>
-            <tr>
-                <td>Pokémon Legends: Arceus</td>
-                <td>Nintendo</td>
-                <td>R$ 279,90</td>
-            </tr>
-            <tr>
-                <td>Halo Infinite</td>
-                <td>Xbox</td>
-                <td>R$ 149,99</td>
-            </tr>
-            <tr>
-                <td>Death Stranding 2: On the beach</td>
-                <td>PlayStation</td>
-                <td>R$ 249,99</td>
-            </tr>
-            <tr>
-                <td rowspan="3">Gift Cards</td>
-                <td>Gift Card Xbox R$ 100</td>
-                <td>Xbox</td>
-                <td>R$ 100,00</td>
-            </tr>
-            <tr>
-                <td>Gift Card PlayStation R$ 100</td>
-                <td>PlayStation</td>
-                <td>R$ 100,00</td>
-            </tr>
-            <tr>
-                <td>Gift Card Nintendo eShop R$ 100</td>
-                <td>Nintendo</td>
-                <td>R$ 100,00</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <hr>
-
-    <h2>Faça seu pedido</h2>
-
-    <form id="formPedido">
-        <label for="nome">Nome:</label><br>
-        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
-        <br><br>
-
-        <label for="email">E-mail:</label><br>
-        <input type="email" id="email" name="email" placeholder="email@exemplo.com" required>
-        <br><br>
-
-        <label for="idade">Idade:</label><br>
-        <input type="number" id="idade" name="idade" placeholder="Digite sua idade">
-        <br><br>
-
-        <label for="jogo">Escolha o jogo ou gift card:</label><br>
-        <select id="jogo" name="jogo"
-            <option value="Grand Theft Auto VI ULTIMATE (GTA 6)">Grand Theft Auto VI ULTIMATE (GTA 6) - R$ 549,90</option>
-            <option value="Grand Theft Auto VI (GTA 6)">Grand Theft Auto VI (GTA 6) - R$ 449,90</option>
-            <option value="Red Dead Redemption 2">Red Dead Redemption 2 - R$ 179,90</option>
-            <option value="Grand Theft Auto V">Grand Theft Auto V - R$ 129,90</option>
-            <option value="The Legend of Zelda: Tears of the Kingdom">The Legend of Zelda: Tears of the Kingdom - R$ 299,90</option>
-            <option value="God of War Ragnarok">God of War Ragnarok - R$ 249,90</option>
-             <option value="Pokémon Legends: Arceus">Pokémon Legends: Arceus - R$ 279,90</option>
-              <option value="Halo Infinite">Halo Infinite - R$ 149,90</option>
-               <option value="Death Stranding 2">Death Stranding 2 - R$ 249,99</option>
-            <option value="Gift Card Xbox">Gift Card Xbox - R$ 100,00</option>
-            <option value="Gift Card PlayStation">Gift Card PlayStation - R$ 100,00</option>
-            <option value="Gift Card Nintendo eShop">Gift Card Nintendo eShop - R$ 100,00</option>
-        </select>
-        <br><br>
-
-        <p>Selecione a forma de pagamento:</p>
-
-        <input type="radio" id="pix" name="forma_pagamento" value="Pix" required>
-        <label for="pix">Pix</label><br>
-
-        <input type="radio" id="cartao" name="forma_pagamento" value="Cartão">
-        <label for="cartao">Cartão</label><br>
-
-        <input type="radio" id="dinheiro" name="forma_pagamento" value="Dinheiro">
-        <label for="dinheiro">Dinheiro</label><br><br>
-
-        <input type="submit" value="Enviar pedido">
-    </form>
-
-    <hr>
-
-    <div id="area-carrinho">
-        <h2>Carrinho</h2>
-        <p>Itens selecionados: <span id="quantidade">0</span></p>
-        <ul id="listaCarrinho"></ul>
-        <button id="btnAdicionar" type="button">Adicionar item</button>
-    </div>
-
-    <div id="resultado">
-        <strong>VALHALLA GAMES</strong>
-        <p>Escolha seus produtos e monte seu pedido!</p>
-    </div>
+        <section id="destaques">
+            <h3>Destaques da loja</h3>
+            <ul class="cards">
+                <li>
+                    <img src="GTA 6 .jpg" alt="GTA 6">
+                    <p>Grand Theft Auto VI (GTA 6) - Xbox e PlayStation</p>
+                </li>
+                <li>
+                    <img src="RDR2 .jpg" alt="RDR2">
+                    <p>Red Dead Redemption 2 - Xbox, PlayStation e PC</p>
+                </li>
+                <li>
+                    <img src="batman-arkham-collection-pc-steam-cover .jpg" alt="Batman">
+                    <p>Batman Arkham Trilogy - PlayStation e Nintendo</p>
+                </li>
+                <li>
+                    <img src="nintendo-switch-playstation-xbox-912x569 .jpg" alt="Gifts">
+                    <p>Gift Cards Xbox, PlayStation e Nintendo eShop</p>
+                </li>
+            </ul>
+            <p class="ver-todos"><a href="produtos.html">Ver todos os produtos</a></p>
+        </section>
+    </main>
 
     <hr>
 
     <div id="rodape">
-        <p>&copy; 2026 VALHALLA GAMES - Grupo: Eduardo, Ian, Beatriz e Lorenzo</p>
+        <p>
+            &copy; 2026 VALHALLA GAMES - Grupo: Eduardo, Ian, Beatriz e Lorenzo
+            <a href="admin.html" title="Área restrita">·</a>
     </div>
 
+
 </body>
-</html> 
+</html>
