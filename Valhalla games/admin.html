@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administração - VALHALLA GAMES</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="topo">
+        <nav>
+            <h2><a href="index.html">VALHALLA GAMES</a></h2>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        <section id="tela-login" class="bloco">
+            <h1>Acesso restrito</h1>
+            <p class="aviso">Área exclusiva da administração da loja.</p>
+
+            <form id="formLogin" class="formulario">
+                <label for="nick">Usuário:</label>
+                <input type="text" id="nick" name="nick" required autocomplete="username" placeholder="Digite o usuário">
+
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required autocomplete="current-password" placeholder="Digite a senha">
+
+                <p id="erro-login" class="aviso" style="color:#ff6b6b; display:none;">Usuário ou senha incorretos.</p>
+
+                <input type="submit" class="botao" value="Entrar">
+            </form>
+        </section>
+
+        <div id="painel-admin" hidden>
+            <h1>Administração da loja</h1>
+            <p class="aviso">Bem-vindo, administrador. Os dados são salvos no navegador (localStorage).</p>
+
+            <p style="margin: 12px 0 28px;">
+                <button type="button" id="btnSair" class="acoes" style="padding:8px 16px;">Sair da conta</button>
+            </p>
+
+            <section id="estoque" class="bloco">
+                <h2>Reabastecer estoque</h2>
+                <p class="aviso">Altere a quantidade e clique em “Salvar estoque”.</p>
+
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Produto</th>
+                                <th>Tipo</th>
+                                <th>Preço</th>
+                                <th>Estoque atual</th>
+                                <th>Novo estoque</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody-estoque">
+                            <!-- preenchido via DOM -->
+                        </tbody>
+                    </table>
+                </div>
+                <button type="button" id="btnSalvarEstoque" class="botao">Salvar estoque</button>
+                <p id="msg-estoque" class="aviso" style="margin-top:12px;" hidden></p>
+            </section>
+
+            <section id="cadastro" class="bloco">
+                <h2>Cadastrar novo jogo ou gift card</h2>
+
+                <form id="formProduto" class="formulario">
+                    <label for="produto">Nome do produto:</label>
+                    <input type="text" id="produto" name="produto" required placeholder="Ex: Elden Ring">
+
+                    <label for="categoria">Categoria:</label>
+                    <select id="categoria" name="categoria">
+                        <option value="jogos">Jogos</option>
+                        <option value="giftcards">Gift Cards</option>
+                    </select>
+
+                    <fieldset>
+                        <legend>Plataformas:</legend>
+                        <label><input type="checkbox" name="plataforma" value="xbox"> Xbox</label>
+                        <label><input type="checkbox" name="plataforma" value="playstation"> PlayStation</label>
+                        <label><input type="checkbox" name="plataforma" value="nintendo"> Nintendo</label>
+                    </fieldset>
+
+                    <label for="preco">Preço (R$):</label>
+                    <input type="number" id="preco" name="preco" min="0" step="0.01" required placeholder="Ex: 249.90">
+
+                    <label for="estoque-inicial">Quantidade em estoque:</label>
+                    <input type="number" id="estoque-inicial" name="estoque" min="0" step="1" required value="10">
+
+                    <label for="selo">Selo (opcional):</label>
+                    <input type="text" id="selo" name="selo" placeholder="Ex: Ultimate, Novo, Gift Card">
+
+                    <label for="imagem">URL ou nome do arquivo da imagem:</label>
+                    <input type="text" id="imagem" name="imagem" placeholder="Ex: eldenring.jpg ou https://...">
+
+                    <input type="submit" class="botao" value="Cadastrar produto">
+                </form>
+                <p id="msg-cadastro" class="aviso" style="margin-top:12px;" hidden></p>
+            </section>
+
+            <section id="lista-produtos" class="bloco">
+                <h2>Produtos cadastrados</h2>
+                <div class="tabela">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Categoria</th>
+                                <th>Plataformas</th>
+                                <th>Preço</th>
+                                <th>Estoque</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody-lista">
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div id="rodape">
+        <p>&copy; 2026 VALHALLA GAMES - Grupo: Eduardo, Ian, Beatriz e Lorenzo</p>
+    </div>
+
+</body>
+</html>
